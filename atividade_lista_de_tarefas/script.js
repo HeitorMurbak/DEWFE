@@ -1,4 +1,7 @@
+const limparButton = document.getElementById('btn-limpar');
+
 let contagem = 0;
+
 function adicionarTarefa(){
     const inputElement = document.getElementById('nova_tarefa');
     const mensagemElement = document.getElementById('mensagem');
@@ -8,7 +11,7 @@ function adicionarTarefa(){
     let tarefa = inputElement.value;
     let mensagem, cor;
     
-    if (tarefaValida(tarefa)) {
+    if (tarefaValida(tarefa, contagem, limparButton)) {
         let novaTarefa = document.createElement('li');
         mensagem = 'Tarefa adicionada com Sucesso!';
         cor = 'green';
@@ -17,6 +20,10 @@ function adicionarTarefa(){
         
         novaTarefa.textContent = tarefa;
         listaDeTarefas.appendChild(novaTarefa);
+        
+        limparButton.classList.add('apparent')
+        console.log(limparButton.classList)
+
     }else{
         mensagem = 'Tarefa inválida, redigite!';
         cor = 'red';
@@ -47,5 +54,6 @@ function limparLista(){
         
         mensagemElement.textContent = 'Lista limpa!';
         mensagemElement.style.color = 'green';
+        limparButton.classList.remove('apparent')
     }
 }
