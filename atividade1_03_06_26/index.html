@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Js</title>
+    <style>
+        div {
+            margin-bottom: 15px;
+        }
+
+        div label,div input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        fieldset{
+            width: 300px;
+            margin-top: 15px;
+
+            label,input{
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        #camposEstudantes{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+   <form>
+    <div>
+        <label>Nome</label>
+        <input type="text">
+    </div>
+
+    <div>
+        <label id="senhaMsg">Senha</label>
+        <input type="password" id="senha" oninput="verificar()">
+        <button type="button" onclick="ordemBotao()">Mostrar/Ocultar</button>
+    </div>
+
+    <input type="checkbox" id="estudante" name="estudante" value="estudante" onchange="MostrarCampoEstudantes()">
+    <label >Sou Estudante</label>
+
+    <fieldset id="camposEstudantes">
+        <label>Curso</label>
+        <input type="text">
+
+        <label>Instituição</label>
+        <input type="text">
+
+        <label>Período</label>
+        <input type="date"> a <input type="date">
+    </fieldset>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
