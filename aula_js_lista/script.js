@@ -64,7 +64,7 @@ if (listaOrdenada.length % 2 == 0){
     console.log("A mediana é " + mediana);
 } else{
     mediana = Math.floor(listaOrdenada.length / 2);
-    console.log("A mediana é " + mediana);
+    console.log("A mediana é " + listaOrdenada[mediana]);
 }
 
 //Desvio Padrão
